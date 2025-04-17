@@ -10,7 +10,7 @@ func TestNoHeader(t *testing.T) {
 
 	_, err := GetAPIKey(header)
 
-	if err.Error() == "no authorization header included" {
+	if err.Error() != "no authorization header included" {
 		t.Fatal("No error received!")
 	}
 }
